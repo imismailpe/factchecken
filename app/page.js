@@ -103,7 +103,7 @@ export default function Home() {
                 className={styles.resultWrap}
               >
                 <Spin spinning={checking}>
-                  <Row gutter={16} justify="center">
+                  <Row gutter={[16, 16]} justify="center">
                     <Col xs={24} md={12}>
                       <Card title="Claims">
                         <ul>
