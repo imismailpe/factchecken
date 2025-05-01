@@ -83,6 +83,9 @@ setTestResult(null);
                 }}
               />
               <div className={styles.spFlex8g}>
+<Button onClick={() => setMessage("")} disabled={checking}>
+                  Clear
+                </Button>
                 <Button onClick={pasteMessage} disabled={checking}>
                   Paste
                 </Button>
