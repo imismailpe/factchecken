@@ -148,7 +148,7 @@ export default function Home() {
             <center>
               <div>Powered by: Gemini, Zod, Vercel, Antd, Github</div>
               <div>
-                Have suggestions? Raise an issue on{" "}
+                Have suggestions? Raise an issue {" "}
                 <a href="https://github.com/imismailpe/factchecken">Here</a>{" "}
               </div>
             </center>
