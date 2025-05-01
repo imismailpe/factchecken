@@ -25,6 +25,7 @@ export default function Home() {
     }
     setChecking(true);
     setDisableInput(true);
+setTestResult({facts: [], claims: []});
     const resp = await fetch("/api/checkfact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
