@@ -101,7 +101,7 @@ export default function Home() {
                 }
                 title={
                   testResult?.fully_correct
-                    ? "That is correct"
+                    ? "That seems correct"
                     : testResult?.partially_correct
                     ? "That is not fully correct"
                     : "That is not correct"
