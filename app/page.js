@@ -18,11 +18,13 @@ export default function Home() {
   const [message, setMessage] = useState("");
   const [checking, setChecking] = useState(false);
   const [testResult, setTestResult] = useState(null);
+  const [disableInput, setDisableInput] = useState(false);
   const checkFact = async () => {
     if(!message){
       return;
     }
     setChecking(true);
+    setDisableInput(true);
     const resp = await fetch("/api/checkfact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -34,6 +36,9 @@ export default function Home() {
     const respJson = await resp.json();
     setTestResult(respJson);
     setChecking(false);
+    setTimeout(() => {
+      setDisableInput(false);
+    }, 5000);
   };
   const pasteMessage = async () => {
     const text = await window.navigator.clipboard.readText();
@@ -72,12 +77,15 @@ export default function Home() {
                 className={styles.inputTextarea}
                 placeholder="Paste your content here"
                 disabled={checking}
+                autoSize={{
+                  minRows: 3
+                }}
               />
               <div className={styles.spFlex8g}>
                 <Button onClick={pasteMessage} disabled={checking}>
                   Paste
                 </Button>
-                <Button type="primary" onClick={checkFact} loading={checking}>
+                <Button type="primary" onClick={checkFact} loading={checking} disabled={disableInput}>
                   Check
                 </Button>
               </div>
