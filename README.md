@@ -1,3 +1,10 @@
+This is a fact checker app. Check what you heard is a fact or a wrong info.
+
+-  Copy the message you got on whatsapp or anywhere.
+-  Paste it on the input on home page or type your own input
+-  Get a detailed analysis on given information
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
