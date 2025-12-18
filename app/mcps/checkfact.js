@@ -19,7 +19,7 @@ const factCheckSchema = z.object({
 
 export const checkFacts = async (userInput) => {
   const { object } = await generateObject({
-    model: google("gemini-2.0-flash"),
+    model: google("gemini-2.5-flash"),
     prompt: userInput,
     schema: factCheckSchema,
     system:
